@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    background-image: url(/NewStore/img/360_F_846601726_7hLhYwUHYiItkyrc195w8gNOalQdJk3O.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+
+    form {
+        width: 33vw;
+        background-image: url(/NewStore/img/hinh-nen-powerpoint-do-an-cuc-dep-2_093018191.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        .aa {
+            background-color: white;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        }
+
+        .aa:focus {
+            background-color: rgba(221, 236, 255, 0.783);
+        }
+
+        h4 {
+            font-weight: 700;
+        }
+
+        .login-button {
+            background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+            font-weight: 700;
+            font-size: large;
+        }
+    }
+}
+
+footer {
+    .icon {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        bottom: 75px;
+        right: 5px;
+    }
+
+    .sider-ai {
+        position: fixed;
+        width: 50px;
+        height: 45px;
+        border-radius: 90% 0 0 90%;
+        bottom: 20px;
+        right: 0;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+}
