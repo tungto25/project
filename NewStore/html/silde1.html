@@ -13,36 +13,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/NewStore/css/slide1.css">
+    <link rel="stylesheet" href="../css/slide1.css">
 </head>
 
 <body>
-    <div class="d-flex">
-        <aside class="side text-white flex-column p-3">
-            <h3 class="text-center"><strong>PINK STORE</strong></h3>
-            <hr class=" m-auto border-3 my-3 border-black">
-            <div class="navbar-nav">
-
-                <a class="nav-link1 active" aria-current="page" href="#">
-                    <div class="d-flex align-items-center gap-3">
-                        <i class="fa-solid fa-gauge-high"></i><span>DASHBOARD</span>
-                    </div>
-                    <span class="me-4">UI ELEMENT</span>
-                </a>
-
-                <hr class=" m-auto border-3 mb-3 border-black">
-                <a class="nav-link" href="#reservation"><i class="fa-solid fa-table"></i>RESERVATION</a>
-                <a class="nav-link" href="#orderfood"><i class="fa-solid fa-utensils"></i>ORDER FOOD</a>
-                <a class="nav-link" href="#paybill"><i class="fa-solid fa-credit-card"></i>PAY BILL</a>
-                <a class="nav-link" href="#information"><i class="fa-solid fa-user"></i>INFORMATION</a>
+    <div class="d-lg-flex d-md-flex">
+        <div class="side text-white flex-column px-3">
+            <div class="text-center pinkstore">
+                <i class="fa-solid fa-store items"></i>
+                <strong class="items d-none">PINK STORE</strong>
+                <button type="button"
+                    class="btn narrow icons bg-black rounded-circle text-white d-flex justify-content-center align-items-center"
+                    style="height: 35px;width: 35px;">
+                    <i class="fa-solid fa-arrow-left items d-none"></i>
+                    <i class="fa-solid fa-arrow-right items"></i>
+                </button>
             </div>
-        </aside>
+
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-gauge-high"></i><span
+                        class="items d-none">DASHBOARD</span></a>
+                <div class="border-bottom border-dark">
+                    <span class="items d-none">UI ELEMENT</span>
+                </div>
+                <a class="nav-link" href="#reservation"><i class="fa-solid fa-table"></i><span
+                        class="items d-none">RESERVATION</span></a>
+                <a class="nav-link" href="#orderfood"><i class="fa-solid fa-utensils"></i><span
+                        class="items d-none">ORDER
+                        FOOD</span></a>
+                <a class="nav-link" href="#paybill"><i class="fa-solid fa-credit-card"></i><span
+                        class="items d-none">PAY
+                        BILL</span></a>
+                <a class="nav-link" href="#information"><i class="fa-solid fa-user"></i><span
+                        class="items d-none">INFORMATION</span></a>
+            </div>
+        </div>
         <main class="flex-grow-1 p-2" id="reservation">
             <div class="topbar d-flex justify-content-between align-items-center mt-2 ">
-                <button type="button" class="btn narrow" style="height: 35px;width: 35px;">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <div class="icon d-flex justify-content-center align-items-center gap-5 ms-5">
+                <div class="icon d-flex justify-content-center align-items-center gap-5 ms-3">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-solid fa-bell"></i>
                     <i class="fa-regular fa-envelope"></i>
@@ -86,7 +94,9 @@
             </div>
         </footer>
     </div>
-    <script src="/NewStore/js/slide1.js"></script>
+    <script src="../js/slide1.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js//getTable.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

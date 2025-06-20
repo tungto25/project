@@ -1,0 +1,43 @@
+{
+  "table" : [
+    {
+        "id": 1,
+        "quantity": "",
+        "nameCustomer" : "",
+        "status": true
+    },
+     {
+        "id": 2,
+        "quantity": "",
+        "nameCustomer" : "",
+        "status": true
+    },
+     {
+        "id": 3,
+        "quantity": "",
+        "nameCustomer" : "",
+        "status": true
+    },
+     {
+        "id": 4,
+        "quantity": "",
+        "nameCustomer" : "",
+        "status": true
+    },
+     {
+        "id": 5,
+        "quantity": "",
+        "nameCustomer" : "",
+        "status": true
+    },
+     {
+        "id": 6,
+        "quantity": "",
+        "nameCustomer" : "",
+        "status": true
+    }
+  ],
+  "foods" : [
+
+  ]
+}
