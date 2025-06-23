@@ -11,159 +11,90 @@ img {
     object-fit: cover;
 }
 
-body {
-    .side {
-        /* width: 240px; */
-        width: fit-content;
-        background-color: #c63d7c;
-        min-height: 100vh;
-        white-space: nowrap;
 
-        hr {
-            width: 90%;
-        }
 
-        .nav-link {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            padding: 20px;
-            flex-wrap: nowrap;
 
-            &:hover {
-                color: black;
-                box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-            }
-        }
+main {
+    background-color: pink;
 
-        .nav-link1 {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 20px;
-            flex-direction: column;
-            text-decoration: none;
+    .topbar {
+        position: relative;
+
+        .narrow {
+            position: absolute;
+            display: grid;
+            place-items: center;
+            background-color: black;
             color: white;
-
-            &:hover {
-                color: black;
-                box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-            }
+            border-radius: 50%;
+            left: -25px;
         }
     }
 
-    main {
-        background-color: pink;
+    .ordercolor {
+        background-color: #c63d7c;
+    }
 
-        .topbar {
-            position: relative;
 
-            .narrow {
-                position: absolute;
-                display: grid;
-                place-items: center;
-                background-color: black;
-                color: white;
-                border-radius: 50%;
-                left: -25px;
-            }
+
+
+    .order-card1 {
+        position: relative;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.05);
         }
 
-        .ordercolor {
+        .number1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
             background-color: #c63d7c;
+            height: 30px;
+            width: 30px;
+            color: white;
         }
 
+        .number2 {
+            width: 35px;
+        }
 
-
-
-        .order-card {
-            position: relative;
-            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-            transition: transform 0.2s ease;
-
-            &:hover {
-                transform: scale(1.05);
-            }
-
-            .number {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                background-color: #c63d7c;
-                height: 30px;
-                width: 30px;
-                color: white;
-            }
-
-            .number1 {
-                width: 35px;
-            }
-
-            .fa-pen-to-square,
-            .currency {
-                color: #c63d7c;
-
-            }
-
-            .box-img {
-                height: 550px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                img {
-                    height: auto;
-                }
-            }
+        .fa-pen-to-square,
+        .currency {
+            color: #c63d7c;
 
         }
 
+        .box-img {
+            height: 550px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: auto;
+            }
+        }
 
     }
 
-    .modal {
-        .modal-dialog {
-            .modal-content {
-                .modal-body {
-                    .table {
-                        img{
-                            width: 60px;
-                            height: auto;
-                        }
+
+}
+
+.modal {
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                .table {
+                    img {
+                        width: 60px;
+                        height: auto;
                     }
                 }
             }
         }
-    }
-}
-
-footer {
-    .icon {
-        position: fixed;
-        width: 40px;
-        height: 40px;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        bottom: 105px;
-        right: 5px;
-    }
-
-    .icon1 {
-        position: fixed;
-        width: 40px;
-        height: 40px;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        bottom: 60px;
-        right: 5px;
-    }
-
-    .sider-ai {
-        position: fixed;
-        width: 50px;
-        height: 45px;
-        border-radius: 90% 0 0 90%;
-        bottom: 10px;
-        right: 0;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 }

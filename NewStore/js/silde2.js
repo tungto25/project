@@ -127,7 +127,7 @@ card.forEach(e => {
                         <h3 class="currency text-center">${e.price}</h3>
                         <div class="d-flex justify-content-center align-items-center mt-1 gap-2">
                             <button class="btn minus number">${e.button1}</button>
-                            <input type="text" class="number1 p-1 text-center" placeholder="0">
+                            <input type="text" class="number2 p-1 text-center" placeholder="0">
                             <button class="btn plus number ">${e.button2}</button>
                         </div>
                     </div>

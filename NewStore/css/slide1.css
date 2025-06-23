@@ -14,6 +14,7 @@ img {
 .side {
     background-color: #c63d7c;
     white-space: nowrap;
+    min-height: 100vh;
     .nav-link {
         display: flex;
         align-items: center;
@@ -26,20 +27,23 @@ img {
             color: white;
         }
     }
-    .pinkstore {
-    position: relative;
-    height: 70px;
-    border-bottom: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
 
-    .icons {
-        position: absolute;
-        right: -15%;
+    .pinkstore {
+        position: relative;
+        height: 70px;
+        border-bottom: 3px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+
+        .icons {
+            position: absolute;
+            right: -15%;
+        }
+
+
     }
-}
 
 }
 
@@ -47,10 +51,12 @@ img {
 
 main {
     background-color: pink;
+
     .topbar {
-        position: relative ;
-
-
+        position: relative;
+        border-bottom: 3px solid black;
+        padding-bottom: 16px;
+        margin-bottom: 20px;
         .narrow {
             position: absolute;
             display: grid;
@@ -61,6 +67,7 @@ main {
             left: -25px;
         }
     }
+
     .order-card {
         position: relative;
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -83,6 +90,7 @@ main {
             transform: scale(1.05);
         }
     }
+    
 }
 
 
@@ -120,10 +128,11 @@ footer {
 @media screen and (min-width: 741px) {
     .side {
         height: 100vh;
+
         .pinkstore {
             .icons {
-               right: -16px;
-               transform: translateX(50%);
+                right: -16px;
+                transform: translateX(50%);
             }
         }
 
@@ -139,6 +148,7 @@ footer {
         }
 
     }
+
     .navbar-nav {
         display: none;
     }
