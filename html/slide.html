@@ -72,34 +72,21 @@
                     </ul>
                 </div>
             </div>
+            <section class="Dashboard">Dashboard</section>
             <section class="reservation">
                 <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 g-3 aaa">
                 </div>
-                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 g-3 mt-0 bbb">
-                </div>
             </section>
-            <section class="d-none orderfood">
+            <section class="orderfood">
                 <div class="selectbar d-flex justify-content-between align-items-center">
                     <div class="choose d-flex align-items-center gap-2 ">
                         <span style="white-space: nowrap;">Choose a table</span>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Choose a table</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="3">4</option>
-                            <option value="3">5</option>
-                            <option value="3">6</option>
-                            <option value="3">7</option>
-                            <option value="3">8</option>
-                            <option value="3">9</option>
-                            <option value="3">10</option>
-                            <option value="3">11</option>
-                            <option value="3">12</option>
+                        <select class="form-select select-order">
+                            <option selected disabled >Choose a table</option>
+                            
                         </select>
                         <!-- modal button order -->
-                        <button type="button" class="btn ordercolor" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                        <button type="button" class="btn ordercolor">
                             Order
                         </button>
                     </div>
@@ -111,42 +98,8 @@
                         Add Food
                     </button>
                 </div>
-                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 g-3 mt-3 food">
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">TABLE BOOKING</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Customer Name</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp" placeholder="Customer Name">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Quantity</label>
-                                        <input type="number" class="form-control" id="exampleInputPassword1"
-                                            placeholder="Quantity">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal1">
-                                    Send
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 g-3 mt-3 food"></div>
+
 
                 <!-- Modal1 -->
                 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -172,7 +125,7 @@
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td><img src="/NewStore/img/c4400f1f2c8441cb7c6eea6844a79135.png" alt="">
+                                            <td><img src="../img/hamberger.png" alt="">
                                             </td>
                                             <td>Hamberger</td>
                                             <td>3</td>
@@ -282,7 +235,7 @@
                     </div>
                 </div>
             </section>
-            <section class="d-none paybill">
+            <section class="paybill">
                 <div class="selectbar d-flex justify-content-between align-items-center">
                     <div class="choose d-flex align-items-center gap-2 ">
                         <span style="white-space: nowrap;">Choose a table</span>
@@ -336,8 +289,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
-                                <td><img src="../img/beefsteak-.png"
-                                        alt=""></td>
+                                <td><img src="../img/beefsteak-.png" alt=""></td>
                                 <td>BeefSteak</td>
                                 <td>1</td>
                                 <td>$129</td>
@@ -352,8 +304,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
-                                <td><img src="../img/chicken.png"
-                                        alt="">
+                                <td><img src="../img/chicken.png" alt="">
                                 </td>
                                 <td>Fried Chicken</td>
                                 <td>2</td>
@@ -368,8 +319,7 @@
                             </tr>
                             <tr>
                                 <th scope="row">6</th>
-                                <td><img src="../img/fried-spaghetti-.png"
-                                        alt=""></td>
+                                <td><img src="../img/fried-spaghetti-.png" alt=""></td>
                                 <td>Spaghetti</td>
                                 <td>9</td>
                                 <td>$129</td>
@@ -387,7 +337,7 @@
                     </table>
                 </div>
             </section>
-            <section class="d-none information">
+            <section class="information">
                 <div class="selectbar d-flex justify-content-between align-items-center">
                     <div class="choose row w-100">
                         <div class="col-lg-5 col-md-5 col-12">
@@ -453,9 +403,40 @@
                 <img src="../img/sider-ai-pro-gia-re-247x296.png" alt="">
             </div>
         </footer>
+        <!-- Modal table booking-->
+        <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">TABLE BOOKING</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Customer Name</label>
+                                <input type="text" class="form-control" id="name"
+                                     placeholder="Customer Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Quantity</label>
+                                <input type="number" class="form-control" id="quantity"
+                                    placeholder="Quantity">
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="booking" type="button" class="btn btn-primary">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="../js//slide1.js"></script>
     <script src="../js/api.js"></script>
     <script src="../js/getTable.js"></script>
+    <script src="../js/getfood.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

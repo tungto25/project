@@ -1,75 +1,73 @@
 {
   "table": [
     {
-      "id": 1,
+      "id": "1",
+      "quantity": "",
+      "nameCustomer": "",
+      "status": false
+    },
+    {
+      "id": "2",
+      "quantity": "4",
+      "nameCustomer": "hung",
+      "status": true
+    },
+    {
+      "id": "3",
+      "quantity": "",
+      "nameCustomer": "",
+      "status": false
+    },
+    {
+      "id": "4",
+      "quantity": "5",
+      "nameCustomer": "laptop",
+      "status": true
+    },
+    {
+      "id": "5",
       "quantity": "",
       "nameCustomer": "",
       "status": true
     },
     {
-      "id": 2,
+      "id": "6",
       "quantity": "",
       "nameCustomer": "",
       "status": true
     },
     {
-      "id": 3,
+      "id": "7",
       "quantity": "",
       "nameCustomer": "",
       "status": true
     },
     {
-      "id": 4,
+      "id": "8",
       "quantity": "",
       "nameCustomer": "",
-      "status": true
-    }
-  ],
-  "table1": [
+      "status": false
+    },
     {
-      "id": 5,
+      "id": "9",
       "quantity": "",
       "nameCustomer": "",
       "status": true
     },
     {
-      "id": 6,
+      "id": "10",
       "quantity": "",
       "nameCustomer": "",
       "status": true
     },
     {
-      "id": 7,
+      "id": "11",
       "quantity": "",
       "nameCustomer": "",
-      "status": true
+      "status": false
     },
     {
-      "id": 8,
-      "quantity": "",
-      "nameCustomer": "",
-      "status": true
-    },
-    {
-      "id": 9,
-      "quantity": "",
-      "nameCustomer": "",
-      "status": true
-    },
-    {
-      "id": 10,
-      "quantity": "",
-      "nameCustomer": "",
-      "status": true
-    },
-    {
-      "id": 11,
-      "quantity": "",
-      "nameCustomer": "",
-      "status": true
-    },
-    {
-      "id": 12,
+      "id": "12",
       "quantity": "",
       "nameCustomer": "",
       "status": true
@@ -77,73 +75,73 @@
   ],
   "Food": [
     {
-      "id": 1,
+      "id": "1",
       "food": "Hamberger",
       "image": "../img/hamberger.png",
       "price": "$39"
     },
     {
-      "id": 2,
+      "id": "2",
       "food": "BeefSteak",
       "image": "../img/beefsteak-.png",
       "price": "$129"
     },
     {
-      "id": 3,
+      "id": "3",
       "food": "Dimsum",
       "image": "../img/dimsum.png",
       "price": "$79"
     },
     {
-      "id": 4,
+      "id": "4",
       "food": "Fried Chicken",
       "image": "../img/chicken.png",
       "price": "$119"
     },
     {
-      "id": 5,
+      "id": "5",
       "food": "Pizza",
       "image": "../img/pizza.png",
       "price": "$79"
     },
     {
-      "id": 6,
+      "id": "6",
       "food": "Sallad",
       "image": "../img/salad.png",
       "price": "$49"
     },
     {
-      "id": 7,
+      "id": "7",
       "food": "Spaghetti",
       "image": "../img/fried-spaghetti-.png",
       "price": "$129"
     },
     {
-      "id": 8,
+      "id": "8",
       "food": "Seafood Noodles",
       "image": "../img/seafood.png",
       "price": "$179"
     },
     {
-      "id": 9,
+      "id": "9",
       "food": "Mixed Rice",
       "image": "../img/bibimap.png",
       "price": "$99"
     },
     {
-      "id": 10,
+      "id": "10",
       "food": "Fried Noodles",
       "image": "../img/noodles.png",
       "price": "$119"
     },
     {
-      "id": 11,
+      "id": "11",
       "food": "Veg Rices",
       "image": "../img/vegrice.png",
       "price": "$99"
     },
     {
-      "id": 10,
+      "id": "10",
       "food": "Pad Thai",
       "image": "../img/padthai.png",
       "price": "$79"
