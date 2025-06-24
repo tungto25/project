@@ -10,6 +10,11 @@ img {
     height: 100%;
 }
 
+:root {
+    --color: rgb(0, 167, 0);
+
+}
+
 h1,
 h2,
 h3,
@@ -23,11 +28,13 @@ hr {
 section {
     display: none;
 }
-
+.all{
+    background-color: rgb(255, 255, 222);
+}
 .side {
-    background-color: #c63d7c;
+    background-color: var(--color);
     white-space: nowrap;
-
+    border-radius: 0 30px 30px 0;
     .nav-link {
         display: flex;
         align-items: center;
@@ -36,8 +43,9 @@ section {
         flex-wrap: nowrap;
 
         &:hover {
-            background-color: black;
-            color: white;
+            background-color: white;
+            color: var(--color);
+
         }
     }
 
@@ -52,10 +60,8 @@ section {
 
         .icons {
             position: absolute;
-            right: -15%;
+            right: -15;
         }
-
-
     }
 
 }
@@ -63,12 +69,38 @@ section {
 
 
 main {
-    background-color: pink;
+    .search{
+        
+    }
+
+    .order-card {
+        position: relative;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        transition: transform 0.2s ease;
+
+        .number {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            border-radius: 50%;
+            background-color: var(--color);
+            height: 30px;
+            width: 30px;
+            display: grid;
+            place-items: center;
+            color: white;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
 
     .orderfood {
         img {
-            height: 200px;
+            height: 250px;
         }
+
         .number1 {
             width: 40px;
             height: 40px;
@@ -76,12 +108,14 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #c63d7c;
+            background-color: var(--color);
             color: white;
         }
+
         .number2 {
             width: 40px;
         }
+
         h3 {
             font-size: 1.2rem;
         }
@@ -104,7 +138,23 @@ main {
         }
     }
 
+    .ordercolor {
+        background-color: var(--color);
+    }
 
+    .table {
+        text-align: center;
+
+        img {
+            width: 60px;
+            height: auto;
+        }
+    }
+
+    .image {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 
@@ -138,12 +188,55 @@ footer {
     }
 }
 
-@media screen and (min-width: 741px) {
+/* laptop */
+@media screen and (min-width: 1025px) {
     .side {
         min-height: 100vh;
+
+        .pinkstore {
+            position: relative;
+            height: 70px;
+            border-bottom: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+
+            .icons {
+                position: absolute;
+                right: -15px;
+                transform: translatex(50%);
+            }
+        }
     }
+
 }
 
+/* tablet */
+@media screen and (min-width: 741px) and (max-width: 1024px) {
+    .side {
+        min-height: 100vh;
+
+        .pinkstore {
+            position: relative;
+            height: 70px;
+            border-bottom: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+
+            .icons {
+                position: absolute;
+                right: -15px;
+                transform: translatex(50%);
+            }
+        }
+    }
+
+}
+
+/* mobile */
 @media screen and (max-width: 740px) {
     .side {
         .pinkstore {

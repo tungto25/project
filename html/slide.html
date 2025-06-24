@@ -3,6 +3,8 @@
 
 <head>
     <title>Title</title>
+    <!-- animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -14,13 +16,10 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/slide1.css">
-    <link rel="stylesheet" href="../css/slide2.css">
-    <link rel="stylesheet" href="../css/slide3.css">
-    <link rel="stylesheet" href="../css/slide4.css">
 </head>
 
 <body>
-    <div class="d-lg-flex d-md-flex">
+    <div class="d-lg-flex d-md-flex all">
         <div class="side text-white flex-column px-3">
             <div class="text-center pinkstore">
                 <i class="fa-solid fa-store items"></i>
@@ -29,7 +28,7 @@
                     class="btn narrow icons bg-black rounded-circle text-white d-flex justify-content-center align-items-center"
                     style="height: 35px;width: 35px;">
                     <i class="fa-solid fa-arrow-left items d-none"></i>
-                    <i class="fa-solid fa-arrow-right items"></i>
+                    <i class="fa-solid fa-bars items"></i>
                 </button>
             </div>
 
@@ -39,22 +38,32 @@
                 <div class="border-bottom border-dark">
                     <span class="items d-none">UI ELEMENT</span>
                 </div>
-                <a class="nav-link a1" href="#reservation"><i class="fa-solid fa-table"></i><span
+                <a class="nav-link " href="#reservation"><i class="fa-solid fa-table"></i><span
                         class="items d-none ">RESERVATION</span></a>
-                <a class="nav-link a2" href="#orderfood"><i class="fa-solid fa-utensils"></i><span
+                <a class="nav-link" href="#orderfood"><i class="fa-solid fa-utensils"></i><span
                         class="items d-none">ORDER
                         FOOD</span></a>
-                <a class="nav-link a3" href="#paybill"><i class="fa-solid fa-credit-card"></i><span
+                <a class="nav-link" href="#paybill"><i class="fa-solid fa-credit-card"></i><span
                         class="items d-none">PAY
                         BILL</span></a>
-                <a class="nav-link a4" href="#information"><i class="fa-solid fa-user"></i><span
+                <a class="nav-link" href="#information"><i class="fa-solid fa-user"></i><span
                         class="items d-none">INFORMATION</span></a>
             </div>
         </div>
         <main class="flex-grow-1 p-2">
             <div class="topbar d-flex justify-content-between align-items-center mt-2 ">
                 <div class="icon d-flex justify-content-center align-items-center gap-5 ms-3">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass search"></i>
+                    <form class="d-flex ms-auto d-none inputsearch" role="search">
+                        <div class="position-relative ">
+                            <input class="form-control rounded-4 px-3 py-2 d-none d-md-block" type="search"
+                                placeholder="Search something..." aria-label="Search" />
+                            <i
+                                class="fa-solid fa-magnifying-glass position-absolute end-0 top-50 translate-middle-y me-2 "></i>
+                            <i
+                                class="fa-regular fa-user position-absolute end-0 top-50 translate-middle-y me-4 px-2 d-block d-md-none"></i>
+                        </div>
+                    </form>
                     <i class="fa-solid fa-bell"></i>
                     <i class="fa-regular fa-envelope"></i>
                 </div>
@@ -78,14 +87,12 @@
                 </div>
             </section>
             <section class="orderfood">
-                <div class="selectbar d-flex justify-content-between align-items-center">
-                    <div class="choose d-flex align-items-center gap-2 ">
-                        <span style="white-space: nowrap;">Choose a table</span>
+                <div class="selectbar d-flex justify-content-between align-items-center flex-wrap gap-3">
+                    <div class="choose d-flex align-items-center gap-2 gap-3">
+                        <h6 style="white-space: nowrap;">Choose a table</h6>
                         <select class="form-select select-order">
-                            <option selected disabled >Choose a table</option>
-                            
+                            <option selected disabled>Choose a table</option>
                         </select>
-                        <!-- modal button order -->
                         <button type="button" class="btn ordercolor">
                             Order
                         </button>
@@ -94,165 +101,20 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button class="btn ordercolor" type="submit">Search</button>
                     </form>
-                    <button type="button" class="btn ordercolor" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    <button type="button" class="btn ordercolor " data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                        style="white-space: nowrap;">
                         Add Food
                     </button>
                 </div>
-                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 g-3 mt-3 food"></div>
+                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3 mt-3 food"></div>
 
-
-                <!-- Modal1 -->
-                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">List of ordered dishes</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col" class="text-center">Image</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Quantity</th>
-                                            <th scope="col">Price</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td><img src="../img/hamberger.png" alt="">
-                                            </td>
-                                            <td>Hamberger</td>
-                                            <td>3</td>
-                                            <td>$39</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td><img src="/NewStore/img/c4400f1f2c8441cb7c6eea6844a79135.png" alt="">
-                                            </td>
-                                            <td>Hamberger</td>
-                                            <td>3</td>
-                                            <td>$39</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td><img src="/NewStore/img/beefsteak-barbecue-sauce-jd-com-png-favpng-ELkEJ6B1yehhnz72vDD2Q2hxQ.png"
-                                                    alt=""></td>
-                                            <td>BeefSteak</td>
-                                            <td>1</td>
-                                            <td>$129</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td><img src="/NewStore/img/siomay-with-ai-generated-free-png (2).png"
-                                                    alt="">
-                                            </td>
-                                            <td>Dimsum</td>
-                                            <td>2</td>
-                                            <td>$79</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td><img src="/NewStore/img/360_F_1436321969_58Kc8DW9mxqVgY2Nq94ZSu77lL7Nl7Ai.png"
-                                                    alt=""></td>
-                                            <td>Fried Chicken</td>
-                                            <td>2</td>
-                                            <td>$119</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td><img src="/NewStore/img/931014d8e72841cf1cef6b2942e68322.png" alt="">
-                                            </td>
-                                            <td>Sallad</td>
-                                            <td>2</td>
-                                            <td>$49</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td><img src="/NewStore/img/fried-spaghetti-grilled-shrimps-tomatoes-260nw-2538299003 (1).png"
-                                                    alt=""></td>
-                                            <td>Spaghetti</td>
-                                            <td>9</td>
-                                            <td>$129</td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td class=""><strong>Total</strong></td>
-                                            <td></td>
-                                            <td><strong>$1901</strong></td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Pay bills</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal2 -->
-                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">ADD FOOD</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Name</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Price</label>
-                                        <input type="number" class="form-control">
-                                    </div>
-                                    <div class="input-group">
-                                        <input type="file" class="form-control" id="inputGroupFile04"
-                                            aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                                        <button class="btn btn-outline-secondary" type="button"
-                                            id="inputGroupFileAddon04">Upload</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Add Food </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
             <section class="paybill">
-                <div class="selectbar d-flex justify-content-between align-items-center">
+                <div class="selectbar d-flex justify-content-between align-items-center ">
                     <div class="choose d-flex align-items-center gap-2 ">
-                        <span style="white-space: nowrap;">Choose a table</span>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Choose a table</option>
-                            <option value="1">Table 1</option>
-                            <option value="2">Table 2</option>
-                            <option value="3">Table 3</option>
-                            <option value="3">Table 4</option>
-                            <option value="3">Table 5</option>
-                            <option value="3">Table 6</option>
-                            <option value="3">Table 7</option>
-                            <option value="3">Table 8</option>
-                            <option value="3">Table 9</option>
-                            <option value="3">Table 10</option>
-                            <option value="3">Table 11</option>
-                            <option value="3">Table 12</option>
+                        <h6 style="white-space: nowrap;">Choose a table</h6>
+                        <select class="form-select bill" aria-label="Default select example">
+                            <option selected disabled>Choose a table</option>
                         </select>
                         <!-- modal button order -->
                         <button type="button" class="btn ordercolor" data-bs-toggle="modal"
@@ -412,16 +274,14 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Customer Name</label>
-                                <input type="text" class="form-control" id="name"
-                                     placeholder="Customer Name">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Quantity</label>
-                                <input type="number" class="form-control" id="quantity"
-                                    placeholder="Quantity">
-                            </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Customer Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" placeholder="Quantity">
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -432,11 +292,141 @@
                 </div>
             </div>
         </div>
+        <!-- Modal1 -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">List of ordered dishes</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col" class="text-center">Image</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td><img src="../img/hamberger.png" alt="">
+                                    </td>
+                                    <td>Hamberger</td>
+                                    <td>3</td>
+                                    <td>$39</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td><img src="/NewStore/img/c4400f1f2c8441cb7c6eea6844a79135.png" alt="">
+                                    </td>
+                                    <td>Hamberger</td>
+                                    <td>3</td>
+                                    <td>$39</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td><img src="/NewStore/img/beefsteak-barbecue-sauce-jd-com-png-favpng-ELkEJ6B1yehhnz72vDD2Q2hxQ.png"
+                                            alt=""></td>
+                                    <td>BeefSteak</td>
+                                    <td>1</td>
+                                    <td>$129</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td><img src="/NewStore/img/siomay-with-ai-generated-free-png (2).png" alt="">
+                                    </td>
+                                    <td>Dimsum</td>
+                                    <td>2</td>
+                                    <td>$79</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td><img src="/NewStore/img/360_F_1436321969_58Kc8DW9mxqVgY2Nq94ZSu77lL7Nl7Ai.png"
+                                            alt=""></td>
+                                    <td>Fried Chicken</td>
+                                    <td>2</td>
+                                    <td>$119</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td><img src="/NewStore/img/931014d8e72841cf1cef6b2942e68322.png" alt="">
+                                    </td>
+                                    <td>Sallad</td>
+                                    <td>2</td>
+                                    <td>$49</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td><img src="/NewStore/img/fried-spaghetti-grilled-shrimps-tomatoes-260nw-2538299003 (1).png"
+                                            alt=""></td>
+                                    <td>Spaghetti</td>
+                                    <td>9</td>
+                                    <td>$129</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td class=""><strong>Total</strong></td>
+                                    <td></td>
+                                    <td><strong>$1901</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Pay bills</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal2 -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">ADD FOOD</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Price</label>
+                                <input type="number" class="form-control">
+                            </div>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile04"
+                                    aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                <button class="btn btn-outline-secondary" type="button"
+                                    id="inputGroupFileAddon04">Upload</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Add Food </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <script src="../js//slide1.js"></script>
     <script src="../js/api.js"></script>
     <script src="../js/getTable.js"></script>
     <script src="../js/getfood.js"></script>
+    <script src="../js/getbill.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

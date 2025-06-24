@@ -4,8 +4,8 @@ async function getAllTable() {
     const data = await getAll(URL_TABLE);
 
     data.forEach(e => {
-        if(e.status){
-          order.innerHTML +=  `<option selected>Table ${e.id}</option>`;
+        if (e.status) {
+            order.innerHTML += `<option selected>Table ${e.id}</option>`;
         }
         const img = e.status ? "../img/table.png" : "../img/table1.png";
         const icon = e.status ? `<div class="d-flex justify-content-evenly align-items-center mt-2">
@@ -26,9 +26,9 @@ async function getAllTable() {
     })
 }
 getAllTable();
-let idBooking ;
+let idBooking;
 function showTable(id) {
-    idBooking = id ;
+    idBooking = id;
 }
 
 const booking = document.getElementById("booking");
@@ -36,16 +36,16 @@ const booking = document.getElementById("booking");
 booking.addEventListener("click", () => {
     const name = document.getElementById("name");
     const quantity = document.getElementById("quantity");
-    
+
     const item = {
-      id: idBooking,
-      quantity: quantity.value,
-      nameCustomer: name.value,
-      status: true
+        id: idBooking,
+        quantity: quantity.value,
+        nameCustomer: name.value,
+        status: true
     }
     console.log(item);
-    
-    edit(URL_TABLE,item);
+
+    edit(URL_TABLE, item);
 })
 
 
