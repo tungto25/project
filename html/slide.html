@@ -101,8 +101,8 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button class="btn ordercolor" type="submit">Search</button>
                     </form>
-                    <button type="button" class="btn ordercolor " data-bs-toggle="modal" data-bs-target="#exampleModal2"
-                        style="white-space: nowrap;">
+                    <button type="button" class="btn ordercolor addfood" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2" style="white-space: nowrap;">
                         Add Food
                     </button>
                 </div>
@@ -387,42 +387,56 @@
                 </div>
             </div>
         </div>
-        <!-- Modal2 -->
+        <!-- Modal add food -->
         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">ADD FOOD</h1>
+                        <h1 class="modal-title fs-5" id="Addfoodtitle">ADD FOOD</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Name</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Price</label>
-                                <input type="number" class="form-control">
-                            </div>
-                            <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile04"
-                                    aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                                <button class="btn btn-outline-secondary" type="button"
-                                    id="inputGroupFileAddon04">Upload</button>
-                            </div>
-                        </form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label ">Name</label>
+                            <input id="nameFood" type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Price</label>
+                            <input id="priceFood" type="number" class="form-control">
+                        </div>
+                        <div class="input-group">
+                            <input type="file" class="form-control" id="fileFood"
+                                aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                            <button class="btn btn-outline-secondary" type="button"
+                                id="inputGroupFileAddon04">Upload</button>
+                        </div>
                     </div>
-                    <img src="../img/Restaurant-Logo-Design-2-1180x664.jpg" alt="" class="img-thumbnail">
+                    <img id="img_food" src="../img/Restaurant-Logo-Design-2-1180x664.jpg" alt="" class="img-thumbnail">
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Add Food </button>
+                        <button id="addFood" type="button" class="btn btn-primary">Add Food </button>
                     </div>
                 </div>
             </div>
         </div>
-
+        <!-- Modal delete -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Do you want to delete?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer m-auto">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
+                        <button id="deletebutton" type="button" class="btn btn-danger ms-3">DELETE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="../js/configCloudinary.js"></script>
     <script src="../js//slide1.js"></script>
     <script src="../js/api.js"></script>
     <script src="../js/getTable.js"></script>
