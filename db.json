@@ -81,22 +81,16 @@
       "price": 39
     },
     {
-      "id": "2",
-      "food": "BeefSteak 3",
-      "price": "130",
-      "image": "https://res.cloudinary.com/dkbmaehcb/image/upload/v1750820340/bx7sphx4rsqwbrust5q7.png"
-    },
-    {
       "id": "3",
       "food": "Dimsum",
-      "image": "../img/dimsum.png",
-      "price": 79
+      "price": "11",
+      "image": "https://res.cloudinary.com/dkbmaehcb/image/upload/v1750964331/ep4evocfbekfzmc5ci3q.png"
     },
     {
       "id": "4",
       "food": "Fried Chicken",
-      "image": "../img/chicken.png",
-      "price": 119
+      "price": "119",
+      "image": "https://res.cloudinary.com/dkbmaehcb/image/upload/v1750964448/vgkyil3n1ggtnenfny32.png"
     },
     {
       "id": "5",
@@ -127,18 +121,6 @@
       "food": "Mixed Rice",
       "image": "../img/bibimap.png",
       "price": 99
-    },
-    {
-      "id": "10",
-      "food": "Fried Noodles",
-      "image": "../img/noodles.png",
-      "price": "$119"
-    },
-    {
-      "id": "11",
-      "food": "Veg Rices",
-      "image": "../img/vegrice.png",
-      "price": "$99"
     }
   ],
   "bill": [

@@ -83,11 +83,14 @@ addfood.addEventListener("click", async () => {
         image: img
     }
     if (idEdit) {
-        edit(URL_FOOD,addNew);
+        edit(URL_FOOD, addNew);
     } else {
         add(URL_FOOD, addNew);
+
     }
+
 })
+
 
 let idFood;
 function showFood(id) {
@@ -113,3 +116,21 @@ function showEdit(id) {
     titleFood.innerText = "Edit Food";
     addfood.innerText = "Update Food";
 }
+
+function reset() {
+    idEdit = null;
+    let name = document.getElementById("nameFood");
+    name.value = "";
+    let price = document.getElementById("priceFood");
+    price.value = "";
+    let img = document.getElementById("img_food");
+    img.src = "../img/Restaurant-Logo-Design-2-1180x664.jpg";
+    let titleFood = document.getElementById("Addfoodtitle");
+    let addfood = document.getElementById("addFood");
+    titleFood.innerText = "Add Food";
+    addfood.innerText = "Add Food";
+
+}
+document.getElementById("closeX").addEventListener("click", () => { reset() });
+
+
