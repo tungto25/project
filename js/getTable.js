@@ -5,12 +5,13 @@ async function getAllTable() {
 
     data.forEach(e => {
         if (e.status) {
-            order.innerHTML += `<option selected>Table ${e.id}</option>`;
+            order.innerHTML += `<option value="${e.id}">Table ${e.id}</option>`;
+            
         }
         const img = e.status ? "../img/table.png" : "../img/table1.png";
         const icon = e.status ? `<div class="d-flex justify-content-evenly align-items-center mt-2">
                             <button type="button" class="btn btn-success d-flex align-items-center gap-2"><i class="fa-solid fa-circle-plus"></i>ADD</button>
-                            <button type="button" class="btn btn-danger d-flex align-items-center gap-2"><i class="fa-solid fa-cart-plus"></i>CART</button>
+                            <button onClick="showCart(${e.id})" type="button" class="btn btn-danger d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#billorder"><i class="fa-solid fa-cart-plus" ></i>CART</button>
                         </div>` : ` <div class="d-flex justify-content-center align-items-center mt-2 booking">
                             <button data-bs-toggle="modal" onClick="showTable(${e.id})"
                             data-bs-target="#bookingModal" type="button" class="btn btn-warning d-flex align-items-center gap-2"><i class="fa-regular fa-calendar-plus"></i>BOOKING</button>
@@ -47,6 +48,29 @@ booking.addEventListener("click", () => {
 
     edit(URL_TABLE, item);
 })
+
+
+function showCart (id) {
+    const cardFood = document.querySelector(".card-food tbody");
+    const total  = document.getElementById("totalFood");   
+    const selectOrder = dataOrder.find(e=>e.id == id);
+      cardFood.innerHTML = "";
+      let totalPrice = 0;
+      selectOrder.bill.forEach((e,index) => {
+          const food = dataFood.find(f => f.id == e.idFood);
+        const totalFood = food.price * e.quantity ;
+        totalPrice += totalFood ;
+        cardFood.innerHTML += ` <tr>
+                                    <th scope="row">${index + 1}</th>
+                                    <td><img src="${food.image}"
+                                            alt=""></td>
+                                    <td>${food.food}</td>
+                                    <td>${e.quantity}</td>
+                                    <td>$${totalFood}</td>
+                                </tr>`          
+      }) 
+         total.innerText = totalPrice ;
+}
 
 
 

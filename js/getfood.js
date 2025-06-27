@@ -1,9 +1,11 @@
 const b = document.querySelector(".food");
 let dataFood; // toàn cục
-async function getAllFood() {
+async function getAllFood(search) {
     const data = await getAll(URL_FOOD);
     dataFood = data;
-    data.forEach(e => {
+    b.innerHTML = "";
+    const filterSearch = data.filter(e => e?.food.toLowerCase().includes(search?.toLowerCase()));
+    filterSearch.forEach(e => {
         const item = document.createElement("div");
         item.classList.add("col");
         item.innerHTML =
@@ -42,7 +44,15 @@ async function getAllFood() {
         })
     });
 }
-getAllFood();
+getAllFood("");
+
+const search = document.getElementById("search");
+
+search.addEventListener("change", () => {
+    const iTemSearch = search.value;
+    getAllFood(iTemSearch);
+})
+
 
 let file_food;
 const fileFood = document.getElementById("fileFood");
@@ -132,5 +142,7 @@ function reset() {
 
 }
 document.getElementById("closeX").addEventListener("click", () => { reset() });
+
+
 
 
