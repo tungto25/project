@@ -93,13 +93,14 @@
                         <select class="form-select select-order">
                             <option selected disabled>Choose a table</option>
                         </select>
-                        <button type="button" class="btn ordercolor">
+                        <button id="ordertable" type="button" class="btn ordercolor" onclick="showBill()">
                             Order
                         </button>
                     </div>
                     <form class="d-flex" role="search">
-                        <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button  class="btn ordercolor" type="submit">Search</button>
+                        <input id="search" class="form-control me-2" type="search" placeholder="Search"
+                            aria-label="Search" />
+                        <button class="btn ordercolor" type="submit">Search</button>
                     </form>
                     <button type="button" class="btn ordercolor addfood" data-bs-toggle="modal"
                         data-bs-target="#exampleModal2" style="white-space: nowrap;">
@@ -124,7 +125,7 @@
                     </div>
                 </div>
                 <div class="px-5 mt-3">
-                    <table class="table table-striped ">
+                    <table class="table table-striped card-food">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -135,57 +136,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <!-- <tr>
                                 <th scope="row">1</th>
                                 <td><img src="../img/hamberger.png" alt=""></td>
                                 <td>Hamberger</td>
                                 <td>3</td>
                                 <td>$39</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td><img src="../img/hamberger.png" alt=""></td>
-                                <td>Hamberger</td>
-                                <td>3</td>
-                                <td>$39</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td><img src="../img/beefsteak-.png" alt=""></td>
-                                <td>BeefSteak</td>
-                                <td>1</td>
-                                <td>$129</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td><img src="../img/dimsum.png" alt="">
-                                </td>
-                                <td>Dimsum</td>
-                                <td>2</td>
-                                <td>$79</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td><img src="../img/chicken.png" alt="">
-                                </td>
-                                <td>Fried Chicken</td>
-                                <td>2</td>
-                                <td>$119</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td><img src="../img/salad.png" alt=""></td>
-                                <td>Sallad</td>
-                                <td>2</td>
-                                <td>$49</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td><img src="../img/fried-spaghetti-.png" alt=""></td>
-                                <td>Spaghetti</td>
-                                <td>9</td>
-                                <td>$129</td>
-                            </tr>
+                            </tr> -->
+
                         </tbody>
                         <tfoot>
                             <tr>
@@ -193,7 +151,7 @@
                                 <td></td>
                                 <td class=""><strong>Total</strong></td>
                                 <td></td>
-                                <td><strong>$1901</strong></td>
+                                <td><strong id="totalFood"></strong></td>
                             </tr>
                         </tfoot>
                     </table>
@@ -276,7 +234,7 @@
             </div>
         </div>
         <!-- Modal1 -->
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="billorder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -284,7 +242,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <table class="table table-striped">
+                        <table class="table table-striped card-food">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -294,71 +252,14 @@
                                     <th scope="col">Price</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td><img src="../img/hamberger.png" alt="">
-                                    </td>
-                                    <td>Hamberger</td>
-                                    <td>3</td>
-                                    <td>$39</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td><img src="/NewStore/img/c4400f1f2c8441cb7c6eea6844a79135.png" alt="">
-                                    </td>
-                                    <td>Hamberger</td>
-                                    <td>3</td>
-                                    <td>$39</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td><img src="/NewStore/img/beefsteak-barbecue-sauce-jd-com-png-favpng-ELkEJ6B1yehhnz72vDD2Q2hxQ.png"
-                                            alt=""></td>
-                                    <td>BeefSteak</td>
-                                    <td>1</td>
-                                    <td>$129</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td><img src="/NewStore/img/siomay-with-ai-generated-free-png (2).png" alt="">
-                                    </td>
-                                    <td>Dimsum</td>
-                                    <td>2</td>
-                                    <td>$79</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td><img src="/NewStore/img/360_F_1436321969_58Kc8DW9mxqVgY2Nq94ZSu77lL7Nl7Ai.png"
-                                            alt=""></td>
-                                    <td>Fried Chicken</td>
-                                    <td>2</td>
-                                    <td>$119</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td><img src="/NewStore/img/931014d8e72841cf1cef6b2942e68322.png" alt="">
-                                    </td>
-                                    <td>Sallad</td>
-                                    <td>2</td>
-                                    <td>$49</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td><img src="/NewStore/img/fried-spaghetti-grilled-shrimps-tomatoes-260nw-2538299003 (1).png"
-                                            alt=""></td>
-                                    <td>Spaghetti</td>
-                                    <td>9</td>
-                                    <td>$129</td>
-                                </tr>
-                            </tbody>
+                            <tbody></tbody>
                             <tfoot>
                                 <tr>
                                     <td></td>
                                     <td></td>
                                     <td class=""><strong>Total</strong></td>
                                     <td></td>
-                                    <td><strong>$1901</strong></td>
+                                    <td><strong id="totalFood"></strong></td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -371,12 +272,14 @@
             </div>
         </div>
         <!-- Modal add food -->
-         <div class="modal fade" id="exampleModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="Addfoodtitle">ADD FOOD</h1>
-                        <button id="closeX" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button id="closeX" type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">

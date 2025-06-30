@@ -123,78 +123,61 @@
       "price": 99
     }
   ],
-  "bill": [
-    {
-      "id": "1",
-      "food": "Hamberger",
-      "image": "../img/hamberger.png",
-      "price": 39
-    },
+  "orders": [
     {
       "id": "2",
-      "food": "BeefSteak",
-      "image": "../img/beefsteak-.png",
-      "price": 129
-    },
-    {
-      "id": "3",
-      "food": "Dimsum",
-      "image": "../img/dimsum.png",
-      "price": 79
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 3
+        },
+        {
+          "idFood": "3",
+          "quantity": 4
+        },
+        {
+          "idFood": "4",
+          "quantity": 4
+        },
+        {
+          "idFood": "5",
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "4",
-      "food": "Fried Chicken",
-      "image": "../img/chicken.png",
-      "price": 119
-    },
-    {
-      "id": "5",
-      "food": "Pizza",
-      "image": "../img/pizza.png",
-      "price": 79
-    },
-    {
-      "id": "6",
-      "food": "Sallad",
-      "image": "../img/salad.png",
-      "price": 49
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 2
+        },
+        {
+          "idFood": "3",
+          "quantity": 2
+        }
+      ]
     },
     {
       "id": "7",
-      "food": "Spaghetti",
-      "image": "../img/fried-spaghetti-.png",
-      "price": 129
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 1
+        },
+        {
+          "idFood": "6",
+          "quantity": 1
+        },
+        {
+          "idFood": "7",
+          "quantity": 1
+        }
+      ]
     },
     {
-      "id": "8",
-      "food": "Seafood Noodles",
-      "image": "../img/seafood.png",
-      "price": 179
-    },
-    {
-      "id": "9",
-      "food": "Mixed Rice",
-      "image": "../img/bibimap.png",
-      "price": 99
-    },
-    {
-      "id": "10",
-      "food": "Fried Noodles",
-      "image": "../img/noodles.png",
-      "price": 119
-    },
-    {
-      "id": "11",
-      "food": "Veg Rices",
-      "image": "../img/vegrice.png",
-      "price": 99
-    },
-    {
-      "id": "12",
-      "food": "Pad Thai",
-      "image": "../img/padthai.png",
-      "price": 79
+      "id": "Choose a table",
+      "bill": []
     }
   ]
 }

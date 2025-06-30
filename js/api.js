@@ -1,6 +1,6 @@
 const URL_TABLE = "http://localhost:3000/table";
 const URL_FOOD = "http://localhost:3000/Food";
-const URL_BILL = "http://localhost:3000/bill";
+const URL_ORDER = "http://localhost:3000/orders";
 async function getAll(url) {
   try {
     const response = await fetch(url);
