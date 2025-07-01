@@ -8,9 +8,9 @@
     },
     {
       "id": "2",
-      "quantity": "4",
-      "nameCustomer": "hung",
-      "status": true
+      "quantity": "",
+      "nameCustomer": "",
+      "status": false
     },
     {
       "id": "3",
@@ -20,9 +20,9 @@
     },
     {
       "id": "4",
-      "quantity": "5",
-      "nameCustomer": "laptop",
-      "status": true
+      "quantity": "",
+      "nameCustomer": "",
+      "status": false
     },
     {
       "id": "5",
@@ -123,61 +123,19 @@
       "price": 99
     }
   ],
-  "orders": [
+  "orders": [],
+  "accounts": [
     {
-      "id": "2",
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 3
-        },
-        {
-          "idFood": "3",
-          "quantity": 4
-        },
-        {
-          "idFood": "4",
-          "quantity": 4
-        },
-        {
-          "idFood": "5",
-          "quantity": 1
-        }
-      ]
+      "id": "b0fc",
+      "username": "admin",
+      "email": "tranthanhtiqn@gmail.com",
+      "password": "123"
     },
     {
-      "id": "4",
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 2
-        },
-        {
-          "idFood": "3",
-          "quantity": 2
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 1
-        },
-        {
-          "idFood": "6",
-          "quantity": 1
-        },
-        {
-          "idFood": "7",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "id": "Choose a table",
-      "bill": []
+      "id": "8b9f",
+      "username": "admin",
+      "email": "tiprokid@gmail.com",
+      "password": "123"
     }
   ]
 }

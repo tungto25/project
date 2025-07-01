@@ -1,17 +1,10 @@
 let dataOrder; // toàn cục
 const orderTable = document.getElementById("ordertable");
-const bill = document.querySelector(".bill")
 async function getAllOrders() {
     const data = await getAll(URL_ORDER);
     dataOrder = data;
-    data.forEach(e => {
-        if (e.id) {
-            bill.innerHTML += `<option value="${e.id}">Table ${e.id}</option>`;
-        }
-
-    })
 }
-
+getAllOrders();
 orderTable.addEventListener("click", () => {
     // day la id ban order
     let idTable = document.querySelector(".select-order").value;
@@ -52,9 +45,8 @@ const billSelect = document.querySelector(".bill");
 
 billSelect.addEventListener("change", () => {
     const bill = billSelect.value;
-    console.log(bill);
-    const cardFood = document.querySelector(".card-food tbody");
-    const total = document.getElementById("totalFood");
+    const cardFood = document.querySelector(".card-bill tbody");
+    const total = document.getElementById("totalBill");
     const selectOrder = dataOrder.find(e => e.id == bill);
     cardFood.innerHTML = "";
     let totalPrice = 0;
@@ -74,3 +66,16 @@ billSelect.addEventListener("change", () => {
     total.innerText = totalPrice;
 })
 
+
+const payBill = document.getElementById("paybill");
+payBill.addEventListener("click", () => {
+    const bill = document.querySelector(".bill");
+    const a = {
+        id: bill.value,
+        quantity: "",
+        nameCustomer: "",
+        status: false
+    }
+    edit(URL_TABLE, a);
+    deleted(URL_ORDER, bill.value);
+})

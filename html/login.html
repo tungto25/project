@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/NewStore/css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body class="d-flex justify-content-center align-items-center">
@@ -18,18 +18,18 @@
     </header>
     <main>
         <form class="bg-white p-5 rounded-3">
-            <h4 class="py-3 text-center mt-2">Login</h4>
+            <h4  class="py-3 text-center mt-2">Login</h4>
             <div class="mb-3 ">
-                <label for="exampleInputEmail1" class="form-label">Username</label>
-                <input type="text" class="form-control aa" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <label  for="exampleInputEmail1" class="form-label">Username</label>
+                <input type="text" class="form-control aa" id="usernamelogin" aria-describedby="emailHelp"
                     placeholder="admin">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control aa" id="exampleInputPassword1" placeholder="Password">
+                <label  for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control aa" id="passwordlogin" placeholder="Password">
             </div>
             <p class="text-end">Forgot password?</p>
-            <button type="button" class="btn login-button w-100 text-white p-2"><a href="/NewStore/html/silde1.html" class="text-decoration-none text-white">Login</a></button>
+            <button id="loginhh" type="button" class="btn login-button w-100 text-white p-2">Login</button>
             <div class="d-flex justify-content-center mt-4 gap-2">
                 <h6><strong>Not a member?</strong></h6>
                 <a href="/NewStore/html/sign-up.html" class="text-danger" style="text-decoration: none;">Sign-up</a>
@@ -50,6 +50,8 @@
             <img src="/NewStore/img/sider-ai-pro-gia-re-247x296.png" alt="">
         </div>
     </footer>
+    <script src="../js/api.js"></script>
+    <script src="../js/login.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
