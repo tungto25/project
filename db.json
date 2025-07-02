@@ -2,21 +2,21 @@
   "table": [
     {
       "id": "1",
-      "quantity": "",
-      "nameCustomer": "",
-      "status": false
+      "quantity": "3",
+      "nameCustomer": "laptop",
+      "status": true
     },
     {
       "id": "2",
-      "quantity": "",
-      "nameCustomer": "",
-      "status": false
+      "quantity": "3",
+      "nameCustomer": "laptop",
+      "status": true
     },
     {
       "id": "3",
-      "quantity": "",
-      "nameCustomer": "",
-      "status": false
+      "quantity": "4",
+      "nameCustomer": "thanhti",
+      "status": true
     },
     {
       "id": "4",
@@ -44,9 +44,9 @@
     },
     {
       "id": "8",
-      "quantity": "",
-      "nameCustomer": "",
-      "status": false
+      "quantity": "5",
+      "nameCustomer": "laptop",
+      "status": true
     },
     {
       "id": "9",
@@ -123,7 +123,90 @@
       "price": 99
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "id": "1",
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 2
+        },
+        {
+          "idFood": "3",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "bill": [
+        {
+          "idFood": "3",
+          "quantity": 2
+        },
+        {
+          "idFood": "4",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "bill": [
+        {
+          "idFood": "7",
+          "quantity": 2
+        },
+        {
+          "idFood": "8",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "bill": [
+        {
+          "idFood": "3",
+          "quantity": 1
+        },
+        {
+          "idFood": "4",
+          "quantity": 1
+        },
+        {
+          "idFood": "5",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "bill": [
+        {
+          "idFood": "8",
+          "quantity": 2
+        },
+        {
+          "idFood": "9",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "bill": [
+        {
+          "idFood": "3",
+          "quantity": 2
+        },
+        {
+          "idFood": "4",
+          "quantity": 1
+        }
+      ]
+    }
+  ],
   "accounts": [
     {
       "id": "b0fc",
