@@ -1,3 +1,4 @@
+
 const b = document.querySelector(".food");
 let dataFood; // toàn cục
 async function getAllFood(search) {
@@ -142,7 +143,3 @@ function reset() {
 
 }
 document.getElementById("closeX").addEventListener("click", () => { reset() });
-
-
-
-

@@ -29,6 +29,14 @@ section {
     display: none;
 }
 
+.chart-box {
+    flex-grow: 1;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .all {
     background-color: rgb(255, 255, 222);
 }

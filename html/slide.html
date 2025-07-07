@@ -81,7 +81,23 @@
                     </ul>
                 </div>
             </div>
-            <section class="Dashboard">Dashboard</section>
+            <section class="Dashboard container">
+                <div class="row row-cols-xl-2 row-cols-md-1">
+                    <div class="col ">
+                        <h3 class="text-center">Doanh thu của mỗi bàn</h3>
+                        <div class="bar-chart chart-box"></div>
+                        <h3 class="text-center mt-3">Số lượng món ăn của mỗi bàn</h3>
+                        <div class="line-chart chart-box"></div>
+                    </div>
+                    <div class="col ">
+                        <h3 class="text-center">Số lượng khách hàng ở mỗi bàn</h3>
+                        <div class="pie-chart chart-box"></div>
+                        <h3 class="text-center">Thống kê tổng quát</h3>
+                        <div class="radar-chart chart-box"></div>
+                    </div>
+                </div>
+
+            </section>
             <section class="reservation">
                 <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 g-3 aaa">
                 </div>
@@ -118,14 +134,14 @@
                             <option selected disabled>Choose a table</option>
                         </select>
                         <!-- modal button order -->
-                        <button type="button" class="btn ordercolor" data-bs-toggle="modal"
+                        <button id="paybill" type="button" class="btn ordercolor" data-bs-toggle="modal"
                             data-bs-target="#exampleModal" style="white-space: nowrap;">
                             Pay Bill
                         </button>
                     </div>
                 </div>
                 <div class="px-5 mt-3">
-                    <table class="table table-striped card-food">
+                    <table class="table table-striped card-bill">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -151,7 +167,7 @@
                                 <td></td>
                                 <td class=""><strong>Total</strong></td>
                                 <td></td>
-                                <td><strong id="totalFood"></strong></td>
+                                <td><strong id="totalBill"></strong></td>
                             </tr>
                         </tfoot>
                     </table>
@@ -322,12 +338,15 @@
             </div>
         </div>
     </div>
+    <!-- Add this script tag to your HTML file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/configCloudinary.js"></script>
     <script src="../js//slide1.js"></script>
     <script src="../js/api.js"></script>
     <script src="../js/getTable.js"></script>
     <script src="../js/getfood.js"></script>
     <script src="../js/getbill.js"></script>
+    <script src="../js/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

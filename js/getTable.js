@@ -1,12 +1,13 @@
 async function getAllTable() {
     const a = document.querySelector(".aaa");
     const order = document.querySelector(".select-order");
+    const bill = document.querySelector(".bill");
     const data = await getAll(URL_TABLE);
 
     data.forEach(e => {
         if (e.status) {
             order.innerHTML += `<option value="${e.id}">Table ${e.id}</option>`;
-
+            bill.innerHTML += `<option value="${e.id}">Table ${e.id}</option>`;
         }
         const img = e.status ? "../img/table.png" : "../img/table1.png";
         const icon = e.status ? `<div class="d-flex justify-content-evenly align-items-center mt-2">
@@ -54,6 +55,8 @@ function showCart(id) {
     const cardFood = document.querySelector(".card-food tbody");
     const total = document.getElementById("totalFood");
     const selectOrder = dataOrder.find(e => e.id == id);
+    console.log(selectOrder);
+
     cardFood.innerHTML = "";
     let totalPrice = 0;
     selectOrder.bill.forEach((e, index) => {
